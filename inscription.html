@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<title>Gaming</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
@@ -11,9 +12,20 @@
 			<a href="index.html"><h1>Gaming</h1></a>
 		</header>
 		<main>
-			<div class="login">
-				<h2>Connexion</h2>
-
+			<div class="signup">
+				<h2>Inscription</h2>
+				<label for="first-name">Prénom</label>
+				<input
+					type="text"
+					label="first"
+					placeholder="Ecrire votre prénom..."
+				/>
+				<label for="name">Nom</label>
+				<input
+					type="text"
+					label="name"
+					placeholder="Ecrire votre nom..."
+				/>
 				<label for="email">E-mail</label>
 				<input
 					type="email"
@@ -34,8 +46,13 @@
 					label="confirm-password"
 					placeholder="Confirmez votre mot de passe..."
 				/>
-				<div class="checkbox"></div>
-				<button class="submit">Se connecter</button>
+				<div class="checkbox">
+					<input type="checkbox" label="checkbox" />
+					<label for="checkbox"
+						>Acceptez les Termes & Conditions</label
+					>
+				</div>
+				<button class="submit">Soumettre</button>
 			</div>
 		</main>
 		<footer>
