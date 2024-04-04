@@ -8,7 +8,6 @@ body {
 	position: relative;
 	height: fit-content;
 	background-color: black;
-	background: linear-gradient(45deg, black, rgb(43, 43, 43));
 }
 h1,
 h2 {
@@ -20,15 +19,16 @@ section {
 	flex-direction: row;
 	align-items: center;
 	justify-content: end;
-	font-size: 36px;
+	font-size: 26px;
 	padding: 0px 20px;
-	background-image: url(https://www.shutterstock.com/image-vector/3d-realistic-style-megaphone-vector-600nw-2016379982.jpg);
+	background-image: url(https://www.chromethemer.com/download/hd-wallpapers/colorful-space-cat-7680x4320.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-color: #ffae0b;
+	background-color: black;
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.281);
 }
 header {
-	background: linear-gradient(0deg, red, darkred);
+	background: linear-gradient(0deg, purple, rgb(61, 0, 61));
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -39,24 +39,38 @@ header {
 	height: 10vh;
 }
 .create {
-	width: 300px;
-	background: linear-gradient(0deg, gold, rgb(184, 156, 0));
+	width: 20vw;
+	background: linear-gradient(0deg, orange, rgb(182, 155, 0));
 	color: black;
+	font-weight: 700;
+	box-shadow: 0px 0px 10px gold;
 }
-.loupe {
-	width: 20px;
-	height: 15px;
+.search {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
+.btn-loupe {
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+	margin-left: -5px;
+}
+
 button {
 	padding: 10px;
 	border-radius: 25px;
+}
+.btn-register {
+	background: linear-gradient(0deg, orange, rgb(182, 155, 0));
+}
+button:hover {
+	cursor: pointer;
 }
 main {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
-	margin: 50px 0px;
+	margin: 15vh 2%;
 }
 .annonce {
 	border: 2px solid white;
@@ -136,6 +150,7 @@ footer {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(0deg, red, darkred);
+	background: linear-gradient(180deg, purple, rgb(61, 0, 61));
 	color: white;
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.281);
 }
