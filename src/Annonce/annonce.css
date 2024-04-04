@@ -79,6 +79,11 @@ img {
 a {
 	color: white;
 }
+.form {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
 .signup {
 	border: 2px solid white;
 	box-shadow: 0px 0px 10px white;
@@ -119,6 +124,7 @@ input {
 	gap: 10px;
 	width: 25vw;
 	color: white;
+	box-shadow: 0px 0px 10px white;
 }
 .login h2 {
 	text-align: center;

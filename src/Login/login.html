@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gaming</title>
+		<link rel="stylesheet" href="./login.css" />
+	</head>
+	<body>
+		<header>
+			<a href="../Index/index.html"><h1>Gaming</h1></a>
+		</header>
+		<main>
+			<div class="form">
+				<form class="login">
+					<h2>Connexion</h2>
+
+					<label for="email">E-mail</label>
+					<input
+						class="email"
+						type="email"
+						label="email"
+						placeholder="Ecrire votre e-mail..."
+					/>
+					<label for="password">Mot de passe</label>
+					<input
+						class="password"
+						type="password"
+						label="password"
+						autocomplete="on"
+						placeholder="Ecrire votre mot de passe..."
+					/>
+
+					<div class="checkbox"></div>
+					<button class="submit" onclick="handleLogin()">
+						Se connecter
+					</button>
+					<p>Pas de compte ?</p>
+					<a href="../Register/register.html">S'inscrire</a>
+				</form>
+			</div>
+		</main>
+		<footer>
+			<h3>Copyright - 2024</h3>
+		</footer>
+	</body>
+</html>

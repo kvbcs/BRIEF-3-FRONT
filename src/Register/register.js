@@ -1,8 +1,7 @@
 console.log("hello");
 
-async function handleRegister(event) {
+async function handleRegister() {
 	event.preventDefault();
-
 	let firstName = document.querySelector(".firstName").value;
 	let lastName = document.querySelector(".lastName").value;
 	let email = document.querySelector(".email").value;
@@ -22,15 +21,19 @@ async function handleRegister(event) {
 		},
 		body: JSON.stringify(newUser),
 	};
+
 	try {
 		let apiRequest = await fetch(
 			"http://localhost:3000/user/register",
 			request
 		);
-		let response = await apiRequest.json();
+		let response = await apiRequest;
 		console.log(response);
-		if (response.status === 200) {
-			window.location.href = "index.html";
+		if (response.status === 201) {
+			window.location.href = "../Index/index.html";
+			console.log("test changement de page");
+		} else {
+			console.log("test");
 		}
 	} catch (e) {
 		console.log(e);
