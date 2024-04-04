@@ -12,38 +12,45 @@
 			<a href="index.html"><h1>Gaming</h1></a>
 		</header>
 		<main>
-			<div class="signup">
+			<form class="signup">
 				<h2>Inscription</h2>
-				<label for="first-name">Prénom</label>
+				<label for="firstName">Prénom</label>
 				<input
+					class="firstName"
 					type="text"
-					label="first"
+					label="firstName"
 					placeholder="Ecrire votre prénom..."
 				/>
 				<label for="name">Nom</label>
 				<input
+					class="lastName"
 					type="text"
 					label="name"
 					placeholder="Ecrire votre nom..."
 				/>
 				<label for="email">E-mail</label>
 				<input
+					class="email"
 					type="email"
 					label="email"
 					placeholder="Ecrire votre e-mail..."
 				/>
 				<label for="password">Mot de passe</label>
 				<input
+					class="password"
 					type="password"
 					label="password"
+					autocomplete="on"
 					placeholder="Ecrire votre mot de passe..."
 				/>
 				<label for="confirm-password"
 					>Confirmez votre mot de passe</label
 				>
 				<input
+					class="confirmPassword"
 					type="password"
 					label="confirm-password"
+					autocomplete="on"
 					placeholder="Confirmez votre mot de passe..."
 				/>
 				<div class="checkbox">
@@ -52,8 +59,12 @@
 						>Acceptez les Termes & Conditions</label
 					>
 				</div>
-				<button class="submit">Soumettre</button>
-			</div>
+				<button class="submit" onclick="handleRegister()">
+					Soumettre
+				</button>
+				<p>Déjà membre ?</p>
+				<a href="connexion.html">Se connecter</a>
+			</form>
 		</main>
 		<footer>
 			<h3>Copyright - 2024</h3>
