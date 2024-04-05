@@ -10,8 +10,10 @@ body {
 	background-color: black;
 }
 h1,
-h2 {
+h2,
+p {
 	color: white;
+	font-family: Ariral, sans-serif, monospace;
 }
 section {
 	height: 50dvh;
@@ -64,6 +66,13 @@ button {
 }
 button:hover {
 	cursor: pointer;
+}
+.disconnect {
+	background-color: red;
+	color: white;
+}
+.hidden {
+	display: none;
 }
 main {
 	display: flex;

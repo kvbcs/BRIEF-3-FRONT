@@ -27,3 +27,14 @@ function deleteButton() {
 		});
 	});
 }
+
+function disconnect() {
+	let disconnect = document.querySelector(".disconnect");
+	let register = document.querySelector(".btn-register");
+	let login = document.querySelector(".btn-login");
+	register.style.display = "none";
+	login.style.display = "none";
+	disconnect.style.display = "inline";
+}
+
+// disconnect();
