@@ -46,7 +46,6 @@ class Annonce {
 		this.titre = titre;
 		this.image = image;
 		this.description = description;
-		this.iduser = iduser;
 	}
 }
 class User {

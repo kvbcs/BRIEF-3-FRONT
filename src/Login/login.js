@@ -1,7 +1,6 @@
 console.log("hello");
 async function handleLogin() {
 	event.preventDefault();
-	event.preventDefault();
 	let email = document.querySelector(".email").value;
 	let password = document.querySelector(".password").value;
 
@@ -11,7 +10,7 @@ async function handleLogin() {
 	};
 
 	let request = {
-		method: "GET",
+		method: "POST",
 		headers: {
 			"Content-Type": "application/json; charset=utf-8",
 		},

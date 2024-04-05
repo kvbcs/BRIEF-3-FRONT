@@ -1,15 +1,13 @@
-async function handleRegister() {
+async function handleAnnonce() {
 	event.preventDefault();
-	let firstName = document.querySelector(".firstName").value;
-	let lastName = document.querySelector(".lastName").value;
-	let email = document.querySelector(".email").value;
-	let password = document.querySelector(".password").value;
-
-	let newUser = {
-		firstName: firstName,
-		lastName: lastName,
-		email: email,
-		password: password,
+	let title = document.querySelector(".title").value;
+	let image = document.querySelector("#image").src;
+	let description = document.querySelector(".description").value;
+	console.log(image);
+	let newAnnonce = {
+		titre: title,
+		image: image,
+		description: description,
 	};
 
 	let request = {
@@ -17,19 +15,17 @@ async function handleRegister() {
 		headers: {
 			"Content-Type": "application/json; charset=utf-8",
 		},
-		body: JSON.stringify(newUser),
+		body: JSON.stringify(newAnnonce),
 	};
 
 	try {
 		let apiRequest = await fetch(
-			"http://localhost:3000/user/register",
+			"http://localhost:3000/annonce/create",
 			request
 		);
 		let response = await apiRequest;
-		console.log(response);
 		if (response.status === 201) {
-			window.location.href = "index.html";
-			console.log("test changement de page");
+			window.location.href = "../Index/index.html";
 		} else {
 			console.log("test");
 		}

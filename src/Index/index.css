@@ -73,7 +73,6 @@ main {
 	margin: 15vh 2%;
 }
 .annonce {
-	border: 2px solid white;
 	border-radius: 25px;
 	width: 30%;
 	display: flex;
