@@ -1,0 +1,42 @@
+@media screen and (max-width: 767px) {
+	header {
+		flex-direction: column;
+		height: 20vh;
+		gap: 10px;
+	}
+	header button {
+		width: fit-content;
+	}
+	.btn-annonce {
+		width: fit-content;
+	}
+	section {
+		flex-direction: column;
+		height: 70dvh;
+	}
+	.section-img {
+		width: fit-content;
+	}
+	section img {
+		width: 100%;
+	}
+	section h1 {
+		padding: 0px;
+		width: 100%;
+		margin: 0px;
+	}
+}
+@media screen and (max-width: 1023px) {
+	section {
+		flex-direction: column;
+	}
+	.section-img {
+		width: fit-content;
+	}
+	section img {
+		width: 100%;
+	}
+	section h1 {
+		width: fit-content;
+	}
+}

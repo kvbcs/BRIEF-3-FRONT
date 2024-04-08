@@ -8,38 +8,39 @@
 	</head>
 	<body>
 		<header>
-			<a href="../Index/index.html"><h1>Le Bon Chat</h1></a>
+			<a href="../Index/index.html"><h2>Le Bon Chat</h2></a>
+			<a href="../Index/index.html"
+				><button>Retour à l'accueil</button></a
+			>
 		</header>
 		<main>
-			<div class="form">
-				<form class="signup">
-					<h2>Créez une annonce</h2>
-					<label for="title">Titre</label>
-					<input
-						class="title"
-						type="text"
-						label="title"
-						placeholder="Ecrire votre titre..."
-					/>
-					<label for="image">Image</label>
-					<img
-						src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
-						alt="un chat"
-						id="image"
-					/>
-					<label for="description">Description</label>
-					<input
-						class="description"
-						type="text"
-						label="description"
-						placeholder="Ecrire votre description..."
-					/>
+			<form class="create-annonce">
+				<h1>Créez une annonce</h1>
+				<label for="title">Titre</label>
+				<input
+					class="title"
+					type="text"
+					label="title"
+					placeholder="Ecrire votre titre..."
+				/>
+				<label for="image">Image</label>
+				<img
+					src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
+					alt="un chat"
+					id="image"
+				/>
+				<label for="description">Description</label>
+				<input
+					class="description"
+					type="text"
+					label="description"
+					placeholder="Ecrire votre description..."
+				/>
 
-					<button class="submit" onclick="handleAnnonce()">
-						Soumettre
-					</button>
-				</form>
-			</div>
+				<button class="submit" onclick="handleAnnonce()">
+					Soumettre
+				</button>
+			</form>
 		</main>
 		<footer>
 			<h3>Copyright - 2024</h3>

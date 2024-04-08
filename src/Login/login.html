@@ -5,40 +5,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Le Bon Chat</title>
 		<link rel="stylesheet" href="./login.css" />
+		<link rel="stylesheet" href="login-responsive.css" />
 	</head>
 	<body>
 		<header>
-			<a href="../Index/index.html"><h1>Le Bon Chat</h1></a>
+			<a href="../Index/index.html"><h2>Le Bon Chat</h2></a>
+			<a href="../Index/index.html"
+				><button>Retour à l'accueil</button></a
+			>
 		</header>
 		<main>
-			<div class="form">
-				<form class="login">
-					<h2>Connexion</h2>
+			<form class="login">
+				<h2>Connexion</h2>
 
-					<label for="email">E-mail</label>
-					<input
-						class="email"
-						type="email"
-						label="email"
-						placeholder="Ecrire votre e-mail..."
-					/>
-					<label for="password">Mot de passe</label>
-					<input
-						class="password"
-						type="password"
-						label="password"
-						autocomplete="on"
-						placeholder="Ecrire votre mot de passe..."
-					/>
+				<label for="email">E-mail</label>
+				<input
+					class="email"
+					type="email"
+					label="email"
+					placeholder="Ecrire votre e-mail..."
+				/>
+				<label for="password">Mot de passe</label>
+				<input
+					class="password"
+					type="password"
+					label="password"
+					autocomplete="on"
+					placeholder="Ecrire votre mot de passe..."
+				/>
 
-					<div class="checkbox"></div>
-					<button class="submit" onclick="handleLogin()">
-						Se connecter
-					</button>
-					<p>Pas de compte ?</p>
-					<a href="../Register/register.html">S'inscrire</a>
-				</form>
-			</div>
+				<div class="checkbox"></div>
+				<button class="submit" onclick="handleLogin()">
+					Se connecter
+				</button>
+				<p>Pas de compte ?</p>
+				<a href="../Register/register.html">S'inscrire</a>
+			</form>
 		</main>
 		<footer>
 			<h3>Copyright - 2024</h3>
