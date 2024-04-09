@@ -3,6 +3,7 @@ async function handleAnnonce() {
   let title = document.querySelector(".title").value;
   let image = document.querySelector("#image").src;
   let description = document.querySelector(".description").value;
+
   console.log(image);
   let newAnnonce = {
     titre: title,
