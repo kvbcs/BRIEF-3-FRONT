@@ -1,11 +1,14 @@
-console.log("hello");
-
 async function handleRegister() {
   event.preventDefault();
+  let textErrorEmail = document.querySelector(".textErrorEmail");
+  let textErrorButton = document.querySelector(".textErrorButton");
   let firstName = document.querySelector(".firstName").value;
   let lastName = document.querySelector(".lastName").value;
   let email = document.querySelector(".email").value;
   let password = document.querySelector(".password").value;
+
+  let textError = document.createElement("p");
+  textError.classList.add("textError");
 
   let newUser = {
     firstName: firstName,
@@ -22,40 +25,28 @@ async function handleRegister() {
     body: JSON.stringify(newUser),
   };
 
-  try {
-    let apiRequest = await fetch(
-      "http://localhost:3000/user/register",
-      request
-    );
-    let response = await apiRequest;
-    console.log(response);
-    if (response.status === 201) {
-      let id = await apiRequest.json();
-      id = id.result.insertedId;
-      localStorage.setItem("_id", id);
-      window.location.href = "../Index/index.html";
+  let apiRequest = await fetch("http://localhost:3000/user/register", request);
+  let response = await apiRequest;
+  if (response.status === 201) {
+    let id = await apiRequest.json();
+    id = id.result.insertedId;
+    localStorage.setItem("_id", id);
+    window.location.href = "../Index/index.html";
+  } else {
+    let msgError = await apiRequest.json();
+    if (response.status === 400 && msgError.error === "please send a email") {
+      textErrorEmail.innerText = "Veuillez rentrer un email";
+      textErrorButton.innerText = "";
+    } else if (response.status === 400 && msgError.error === "Missing fields") {
+      textErrorButton.innerText = "Veuillez remplir les champs";
+      textErrorEmail.innerText = "";
+      checkbox.appendChild(textError);
+    } else if (response.status === 401) {
+      textErrorEmail.innerText = "Email déja utiliser";
+      textErrorButton.innerText = "";
     } else {
-      console.log("test");
+      textErrorButton.innerText = "Error";
+      textErrorEmail.innerText = "";
     }
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-class Annonce {
-  constructor(id, titre, image, description, iduser) {
-    this.id = id;
-    this.titre = titre;
-    this.image = image;
-    this.description = description;
-  }
-}
-class User {
-  constructor(id, firstname, lastname, email, password) {
-    this.id = id;
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.email = email;
-    this.password = password;
   }
 }

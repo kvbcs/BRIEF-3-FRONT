@@ -4,12 +4,10 @@ const disconnectButton = document.querySelector(".disconnect");
 const register = document.querySelector(".btn-register");
 const login = document.querySelector(".btn-login");
 let id = localStorage.getItem("_id");
-let annonces;
 
 async function getAnnonces() {
   let apiRequest = await fetch("http://localhost:3000/annonce/all");
-  annonces = await apiRequest.json();
-  console.log(annonces);
+  let annonces = await apiRequest.json();
   annonces.annonces.forEach(async (annonce, i) => {
     let infoAnnonce = {
       ...annonce,
@@ -49,9 +47,7 @@ function modalAnnonce() {
       if (id) {
         let apiRequest = await fetch(`http://localhost:3000/user/${id}`);
         let response = await apiRequest;
-
         if (response.status === 200) {
-          // verifier si l'id  et l'idUser sont identique
           let compare = {
             idUser: id,
             idAnnonce: element.classList[1],
@@ -206,6 +202,25 @@ async function isConnected(id) {
     }
   }
 }
+async function isAdmin(id) {
+  let idBody = {
+    id: id,
+  };
+  let request = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+    },
+    body: JSON.stringify(idBody),
+  };
+  let isAdminCall = await fetch("http://localhost:3000/user/isAdmin", request);
+  let result = await isAdminCall;
+  console.log(result);
+  if (result.status !== 200) {
+    let btnAdmin = document.querySelector(".btn-admin");
+    btnAdmin.remove();
+  }
+}
 disconnectButton.addEventListener("click", () => {
   localStorage.removeItem("_id");
   id = null;
@@ -215,7 +230,7 @@ disconnectButton.addEventListener("click", () => {
 });
 getAnnonces();
 isConnected(id);
-
+isAdmin(id);
 //comparer le _id avec l'object id dans la base de donnée
 //si il n'y à aucun utilisateur avec cette object id
 //supprimer le local storage

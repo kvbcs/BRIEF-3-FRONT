@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Le Bon Chat</title>
+		<link rel="stylesheet" href="./admin.css" />
+	</head>
+	<body>
+		<header>
+			<a href="../Index/index.html"><h2>Le Bon Chat</h2></a>
+			<a href="../Index/index.html"
+				><button>Retour à l'accueil</button></a
+			>
+		</header>
+		<main>
+			<h1>Utilisateurs</h1>
+			<div class="container-search">
+				<input type="search" placeholder="Recherchez..." />
+				<button
+					type="submit"
+					class="submit"
+					onclick="search() ;	getUserByEmail()"
+				>
+					Soumettre
+				</button>
+			</div>
+			<table>
+				<tr class="table-header">
+					<th><h2>Prénom</h2></th>
+					<th><h2>Nom</h2></th>
+					<th><h2>Email</h2></th>
+					<th><h2>Statut</h2></th>
+				</tr>
+				<tr class="users hidden">
+					<th>jean</th>
+					<th>bidule</th>
+					<th>email@email.com</th>
+					<th class="select">
+						<select>
+							<option value="actif" selected>Actif</option>
+							<option value="desactiver">Désactiver</option>
+						</select>
+					</th>
+				</tr>
+			</table>
+		</main>
+		<footer>
+			<h3>Copyright - 2024</h3>
+		</footer>
+	</body>
+	<script src="admin.js"></script>
+</html>

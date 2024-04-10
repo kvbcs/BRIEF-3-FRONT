@@ -29,7 +29,8 @@
           label="name"
           placeholder="Ecrire votre nom..."
         />
-        <label for="email">E-mail</label>
+        <label for="email" class="labelEmail">E-mail</label>
+        <p class="textErrorEmail"></p>
         <input
           class="email"
           type="email"
@@ -56,6 +57,7 @@
           <input type="checkbox" label="checkbox" />
           <label for="checkbox">Acceptez les Termes & Conditions</label>
         </div>
+        <div class="textErrorButton"></div>
         <button class="submit" onclick="handleRegister()">Soumettre</button>
         <p>Déjà membre ?</p>
         <a href="../Login/login.html">Se connecter</a>

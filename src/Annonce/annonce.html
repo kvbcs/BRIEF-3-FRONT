@@ -21,13 +21,8 @@
           label="title"
           placeholder="Ecrire votre titre..."
         />
-        <label for="image">Image</label>
-        <img
-          src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
-          alt="un chat"
-          id="image"
-        />
-        <!-- <input type="url" id="image" /> -->
+        <label for="image" id="labelImage">Image</label>
+        <input type="url" id="image" placeholder="Inserer une url..." />
         <label for="description">Description</label>
         <input
           class="description"
@@ -35,7 +30,7 @@
           label="description"
           placeholder="Ecrire votre description..."
         />
-
+        <div class="messageError"></div>
         <button class="submit" onclick="handleAnnonce()">Soumettre</button>
       </form>
     </main>

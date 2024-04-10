@@ -1,19 +1,24 @@
 @media screen and (max-width: 767px) {
 	header {
 		flex-direction: column;
-		height: 25vh;
+		height: 300px;
+		position: relative;
 		gap: 10px;
 	}
 	header button {
 		width: fit-content;
+		font-size: 14px;
 	}
+
 	.btn-annonce {
 		width: fit-content;
 	}
 	section {
 		flex-direction: column;
 		height: 60dvh;
-		margin-top: 35vh;
+		position: relative;
+		top: -10vh;
+		/* margin-top: 270px; */
 	}
 	.section-img {
 		width: fit-content;
@@ -22,22 +27,46 @@
 		width: 100%;
 	}
 	section h1 {
+		font-size: 5px;
 		padding: 0px;
 		width: 100%;
 		margin: 0px;
 	}
+	.annonce-p {
+		padding: 0px 50px 0px;
+		margin-bottom: 10px;
+	}
+	.annonce img {
+		height: 175px;
+	}
+	main {
+		margin-top: -150px;
+	}
 }
 @media screen and (max-width: 1023px) {
+	header button {
+		width: fit-content;
+		font-size: 14px;
+	}
 	section {
+		margin-top: 150px;
 		flex-direction: column;
 	}
 	.section-img {
-		width: fit-content;
+		padding-top: 50px;
+		object-fit: cover;
+		width: 100%;
 	}
 	section img {
 		width: 100%;
 	}
+
 	section h1 {
 		width: fit-content;
+		font-size: 36px;
+	}
+	.annonce-p {
+		padding: 0px 50px 0px;
+		margin-bottom: 10px;
 	}
 }
