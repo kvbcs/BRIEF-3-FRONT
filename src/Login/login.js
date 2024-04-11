@@ -11,7 +11,7 @@ async function handleLogin() {
     email: email,
     password: password,
   };
-  //creation de la requete à envoié au back
+  //creation de la requete à envoyé au back
   let request = {
     method: "POST",
     headers: {
@@ -20,7 +20,7 @@ async function handleLogin() {
     body: JSON.stringify(newUser),
   };
 
-  //Essaie de communication afin de vérifier si les informations correspondent
+  //Communication afin de vérifier si les informations correspondent
   let apiRequest = await fetch("http://localhost:3000/user/login", request);
   let response = await apiRequest;
   let msgError;
